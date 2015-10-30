@@ -1,0 +1,11 @@
+---
+
+# sudo /opt/logstash/bin/logstash -f /etc/logstash/conf.d/mysql_slow_log.conf --verbose [or --debug]
+- template: src=mysql_slow_log.conf.j2
+  args:
+    dest: "{{ logstash_conf_dest }}/mysql_slow_log.conf"
+    owner: "{{ logstash_user }}"
+    group: "{{ logstash_group }}"
+    mode: 0644
+  when: logstash_mysql_slow_install == true
+  notify: restart-logstash

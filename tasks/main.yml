@@ -1,0 +1,9 @@
+---
+# tasks file for ansible-logstash
+# https://www.elastic.co/guide/en/logstash/current/introduction.html
+
+- include: main-apt.yml
+  when: ansible_os_family == "Debian"
+
+# Configuration
+- include: main-conf.yml
