@@ -1,0 +1,42 @@
+# User@Host: rdsadmin[rdsadmin] @ localhost [127.0.0.1]
+# Query_time: 0.013783  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
+use mysql;
+SET timestamp=1445342700;
+flush logs;
+# Time: 151020 12:05:15
+# User@Host: rdsadmin[rdsadmin] @ localhost [127.0.0.1]
+# Query_time: 0.000313  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1445342715;
+SELECT 1;
+# User@Host: rdsadmin[rdsadmin] @ localhost [127.0.0.1]
+# Query_time: 0.000129  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1445342715;
+SELECT 1;
+# User@Host: rdsadmin[rdsadmin] @ localhost [127.0.0.1]
+# Query_time: 0.000037  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1445342715;
+SELECT 1;
+# User@Host: rdsadmin[rdsadmin] @ localhost [127.0.0.1]
+# Query_time: 0.000211  Lock_time: 0.000090 Rows_sent: 1  Rows_examined: 1
+SET timestamp=1445342715;
+SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2';
+# User@Host: rdsadmin[rdsadmin] @ localhost [127.0.0.1]
+# Query_time: 0.000037  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1445342715;
+SELECT 1;
+# User@Host: rdsadmin[rdsadmin] @ localhost [127.0.0.1]
+# Query_time: 0.000124  Lock_time: 0.000030 Rows_sent: 1  Rows_examined: 1
+SET timestamp=1445342715;
+SELECT value FROM mysql.rds_heartbeat2;
+# Time: 151020 12:05:24
+# User@Host: root[root] @ ip-127.0.0.1]ec2.internal [127.0.0.1
+# Query_time: 0.000296  Lock_time: 0.000079 Rows_sent: 0  Rows_examined: 0
+use mobilepush;
+SET timestamp=1445342724;
+SELECT * FROM mobile_notifications WHERE ACCOUNT_ID = 1010002825 AND NOTIFICATION_TYPE = 1 AND USER_ID != '';
+# Time: 151020 12:05:25
+# User@Host: root[root] @ ip-127.0.0.1].ec2.internal [127.0.0.1]
+# Query_time: 0.002527  Lock_time: 0.000111 Rows_sent: 0  Rows_examined: 0
+use reports_db;
+SET timestamp=1445342725;
+SHOW TABLES LIKE 'reports_partition_mapping';

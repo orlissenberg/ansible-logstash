@@ -1,0 +1,9 @@
+---
+# defaults file for ansible-logstash
+
+logstash_user: "root"
+logstash_group: "root"
+logstash_conf_dest: /etc/logstash/conf.d
+
+logstash_mysql_slow_install: false
+logstash_mysql_slow_path: ""
