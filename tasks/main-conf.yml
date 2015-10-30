@@ -1,11 +1,15 @@
 ---
 
+- stat: path="{{ logstash_conf_dest }}/mysql_slow_log.conf"
+  register: logstash_slow_log_exists
+
 # sudo /opt/logstash/bin/logstash -f /etc/logstash/conf.d/mysql_slow_log.conf --verbose [or --debug]
+# rm /root/.sincedb*
 - template: src=mysql_slow_log.conf.j2
   args:
     dest: "{{ logstash_conf_dest }}/mysql_slow_log.conf"
     owner: "{{ logstash_user }}"
     group: "{{ logstash_group }}"
     mode: 0644
-  when: logstash_mysql_slow_install == true
+  when: logstash_mysql_slow_install == true and logstash_slow_log_exists.stat.exists == false
   notify: restart-logstash

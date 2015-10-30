@@ -1,42 +1,253 @@
-# User@Host: rdsadmin[rdsadmin] @ localhost [127.0.0.1]
-# Query_time: 0.013783  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
-use mysql;
-SET timestamp=1445342700;
-flush logs;
-# Time: 151020 12:05:15
-# User@Host: rdsadmin[rdsadmin] @ localhost [127.0.0.1]
-# Query_time: 0.000313  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
-SET timestamp=1445342715;
-SELECT 1;
-# User@Host: rdsadmin[rdsadmin] @ localhost [127.0.0.1]
-# Query_time: 0.000129  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
-SET timestamp=1445342715;
-SELECT 1;
-# User@Host: rdsadmin[rdsadmin] @ localhost [127.0.0.1]
-# Query_time: 0.000037  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
-SET timestamp=1445342715;
-SELECT 1;
-# User@Host: rdsadmin[rdsadmin] @ localhost [127.0.0.1]
-# Query_time: 0.000211  Lock_time: 0.000090 Rows_sent: 1  Rows_examined: 1
-SET timestamp=1445342715;
-SELECT count(*) from information_schema.TABLES WHERE TABLE_SCHEMA = 'mysql' AND TABLE_NAME = 'rds_heartbeat2';
-# User@Host: rdsadmin[rdsadmin] @ localhost [127.0.0.1]
-# Query_time: 0.000037  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
-SET timestamp=1445342715;
-SELECT 1;
-# User@Host: rdsadmin[rdsadmin] @ localhost [127.0.0.1]
-# Query_time: 0.000124  Lock_time: 0.000030 Rows_sent: 1  Rows_examined: 1
-SET timestamp=1445342715;
-SELECT value FROM mysql.rds_heartbeat2;
-# Time: 151020 12:05:24
-# User@Host: root[root] @ ip-127.0.0.1]ec2.internal [127.0.0.1
-# Query_time: 0.000296  Lock_time: 0.000079 Rows_sent: 0  Rows_examined: 0
-use mobilepush;
-SET timestamp=1445342724;
-SELECT * FROM mobile_notifications WHERE ACCOUNT_ID = 1010002825 AND NOTIFICATION_TYPE = 1 AND USER_ID != '';
-# Time: 151020 12:05:25
-# User@Host: root[root] @ ip-127.0.0.1].ec2.internal [127.0.0.1]
-# Query_time: 0.002527  Lock_time: 0.000111 Rows_sent: 0  Rows_examined: 0
-use reports_db;
-SET timestamp=1445342725;
-SHOW TABLES LIKE 'reports_partition_mapping';
+/usr/local/mysql/bin/mysqld, Version: 5.6.14-log (MySQL Community Server (GPL)). started with:
+Tcp port: 0  Unix socket: (null)
+Time                 Id Command    Argument
+# Time: 151029 11:36:35
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     4
+# Query_time: 0.007710  Lock_time: 0.000053 Rows_sent: 27  Rows_examined: 27
+use nemo;
+SET timestamp=1446114995;
+SHOW DATABASES;
+# Time: 151029 11:36:46
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     5
+# Query_time: 0.021192  Lock_time: 0.006344 Rows_sent: 1000  Rows_examined: 3000
+SET timestamp=1446115006;
+select * from events ev
+inner join events_groups eg on eg.event_id = ev.id
+inner join events_target_groups ta on ta.event_id = ev.id
+LIMIT 0, 1000;
+# Time: 151029 11:37:12
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.002385  Lock_time: 0.000098 Rows_sent: 341  Rows_examined: 341
+use dashboard;
+SET timestamp=1446115032;
+show global status;
+# Time: 151029 11:37:14
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     5
+# Query_time: 0.014022  Lock_time: 0.000191 Rows_sent: 1000  Rows_examined: 3000
+use nemo;
+SET timestamp=1446115034;
+select * from events ev
+inner join events_groups eg on eg.event_id = ev.id
+inner join events_target_groups ta on ta.event_id = ev.id
+LIMIT 0, 1000;
+# Time: 151029 11:37:19
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     5
+# Query_time: 0.009622  Lock_time: 0.000108 Rows_sent: 1000  Rows_examined: 3000
+SET timestamp=1446115039;
+select * from events ev
+inner join events_groups eg on eg.event_id = ev.id
+inner join events_target_groups ta on ta.event_id = ev.id
+LIMIT 0, 1000;
+# Time: 151029 11:37:21
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     5
+# Query_time: 0.010231  Lock_time: 0.000144 Rows_sent: 1000  Rows_examined: 3000
+SET timestamp=1446115041;
+select * from events ev
+inner join events_groups eg on eg.event_id = ev.id
+inner join events_target_groups ta on ta.event_id = ev.id
+LIMIT 0, 1000;
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     5
+# Query_time: 0.009835  Lock_time: 0.000132 Rows_sent: 1000  Rows_examined: 3000
+SET timestamp=1446115041;
+select * from events ev
+inner join events_groups eg on eg.event_id = ev.id
+inner join events_target_groups ta on ta.event_id = ev.id
+LIMIT 0, 1000;
+# Time: 151029 12:19:11
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001252  Lock_time: 0.000137 Rows_sent: 341  Rows_examined: 341
+use dashboard;
+SET timestamp=1446117551;
+show global status;
+# Time: 151029 12:19:37
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001185  Lock_time: 0.000125 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446117577;
+show global status;
+# Time: 151029 12:20:00
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001625  Lock_time: 0.000155 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446117600;
+show global status;
+# Time: 151029 12:20:11
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001436  Lock_time: 0.000139 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446117611;
+show global status;
+# Time: 151029 12:22:46
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001226  Lock_time: 0.000156 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446117766;
+show global status;
+# Time: 151029 12:27:02
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001202  Lock_time: 0.000155 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446118022;
+show global status;
+# Time: 151029 12:31:46
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001237  Lock_time: 0.000134 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446118306;
+show global status;
+# Time: 151029 12:39:36
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001406  Lock_time: 0.000148 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446118776;
+show global status;
+# Time: 151029 12:41:16
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001386  Lock_time: 0.000127 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446118876;
+show global status;
+# Time: 151029 12:42:31
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001730  Lock_time: 0.000146 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446118951;
+show global status;
+# Time: 151029 12:42:37
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001283  Lock_time: 0.000136 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446118957;
+show global status;
+# Time: 151029 12:42:56
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001268  Lock_time: 0.000124 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446118976;
+show global status;
+# Time: 151029 12:43:15
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001264  Lock_time: 0.000144 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446118995;
+show global status;
+# Time: 151029 12:43:34
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001357  Lock_time: 0.000158 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446119014;
+show global status;
+# Time: 151029 12:43:37
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001458  Lock_time: 0.000128 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446119017;
+show global status;
+# Time: 151029 12:43:40
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001559  Lock_time: 0.000152 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446119020;
+show global status;
+# Time: 151029 12:49:27
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001324  Lock_time: 0.000197 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446119367;
+show global status;
+# Time: 151029 12:53:49
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001175  Lock_time: 0.000135 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446119629;
+show global status;
+# Time: 151029 13:40:06
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001630  Lock_time: 0.000136 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446122406;
+show global status;
+# Time: 151029 13:40:13
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001963  Lock_time: 0.000175 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446122413;
+show global status;
+# Time: 151029 13:40:19
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001515  Lock_time: 0.000141 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446122419;
+show global status;
+# Time: 151029 13:40:25
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001231  Lock_time: 0.000141 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446122425;
+show global status;
+# Time: 151029 13:40:57
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001421  Lock_time: 0.000217 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446122457;
+show global status;
+# Time: 151029 13:43:22
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001355  Lock_time: 0.000120 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446122602;
+show global status;
+# Time: 151029 14:59:09
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001259  Lock_time: 0.000186 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446127149;
+show global status;
+# Time: 151029 14:59:22
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.002131  Lock_time: 0.000158 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446127162;
+show global status;
+# Time: 151029 14:59:25
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001948  Lock_time: 0.000177 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446127165;
+show global status;
+# Time: 151029 14:59:35
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.002295  Lock_time: 0.000276 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446127175;
+show global status;
+# Time: 151029 14:59:48
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001229  Lock_time: 0.000118 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446127188;
+show global status;
+# Time: 151029 15:00:01
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001678  Lock_time: 0.000144 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446127201;
+show global status;
+# Time: 151029 15:05:35
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     2
+# Query_time: 0.001359  Lock_time: 0.000136 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446127535;
+show global status;
+# Time: 151030 10:03:28
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     6
+# Query_time: 0.003688  Lock_time: 0.000035 Rows_sent: 27  Rows_examined: 27
+use nemo;
+SET timestamp=1446195808;
+SHOW DATABASES;
+# Time: 151030 10:56:36
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     6
+# Query_time: 0.009043  Lock_time: 0.007406 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1446198996;
+help 'SELECT';
+# Time: 151030 11:11:10
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.001284  Lock_time: 0.000228 Rows_sent: 341  Rows_examined: 341
+use dashboard;
+SET timestamp=1446199870;
+show global status;
+# Time: 151030 11:26:17
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.001238  Lock_time: 0.000166 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446200777;
+show global status;
+# Time: 151030 13:01:05
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.001357  Lock_time: 0.000200 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446206465;
+show global status;
+# Time: 151030 13:23:38
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.001401  Lock_time: 0.000189 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446207818;
+show global status;
+# Time: 151030 13:49:14
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.001505  Lock_time: 0.000187 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446209354;
+show global status;
+# Time: 151030 15:31:57
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 0.001245  Lock_time: 0.000189 Rows_sent: 341  Rows_examined: 341
+SET timestamp=1446215517;
+show global status;
