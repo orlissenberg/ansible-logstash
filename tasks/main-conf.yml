@@ -1,9 +1,23 @@
 ---
 
+# LogStash
+- template: src=jvm.options.j2 dest=/etc/logstash/jvm.options owner=root group=root mode=0644
+  notify: restart-logstash
+
+- template: src=log4j2.properties.j2 dest=/etc/logstash/log4j2.properties owner=root group=root mode=0644
+  notify: restart-logstash
+
+- template: src=logstash.yml.j2 dest=/etc/logstash/logstash.yml owner=root group=root mode=0644
+  notify: restart-logstash
+
+- template: src=startup.options.j2 dest=/etc/logstash/startup.options owner=root group=root mode=0644
+  notify: restart-logstash
+
+# MySQL
 - stat: path="{{ logstash_conf_dest }}/mysql_slow_log.conf"
   register: logstash_slow_log_exists
 
-# sudo /opt/logstash/bin/logstash -f /etc/logstash/conf.d/mysql_slow_log.conf --verbose [or --debug]
+# sudo ﻿/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/mysql_slow_log.conf --verbose [or --debug]
 # rm /root/.sincedb*
 - template: src=mysql_slow_log.conf.j2
   args:

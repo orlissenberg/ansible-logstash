@@ -1,9 +1,14 @@
 ---
 # tasks file for ansible-logstash
-# https://www.elastic.co/guide/en/logstash/current/introduction.html
+# https://www.elastic.co/guide/en/logstash/current/installing-logstash.html#package-repositories
 
+# Install
+# ﻿/usr/share/logstash/bin/logstash --version
 - include: main-apt.yml
   when: ansible_os_family == "Debian"
 
 # Configuration
 - include: main-conf.yml
+
+# Plugins
+- include: main-plugins.yml

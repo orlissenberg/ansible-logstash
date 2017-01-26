@@ -6,6 +6,8 @@ Install Logstash
 Requirements
 ------------
 
+https://www.elastic.co/guide/en/logstash/current/input-plugins.html
+
 ...
 
 Role Variables

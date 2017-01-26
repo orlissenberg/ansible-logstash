@@ -13,8 +13,10 @@ EOF
 # Create group_vars for the webservers
 mkdir -p $TMP_DIR/group_vars 2> /dev/null
 cat << EOF > $TMP_DIR/group_vars/webservers
-logstash_mysql_slow_install: true
-logstash_mysql_slow_path: "/vagrant/ansible/roles/ansible-logstash/files/mysql_slow_example.log"
+logstash_user: "root"
+logstash_group: "root"
+logstash_conf_dest: /etc/logstash/conf.d
+logstash_install_input_beats: true
 EOF
 
 # Create Ansible config
@@ -30,7 +32,7 @@ cat << EOF > $TMP_DIR/playbook.yml
 
 - hosts: webservers
   gather_facts: yes
-  sudo: no
+  become: true
 
   roles:
     - ansible-logstash

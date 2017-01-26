@@ -1,12 +1,11 @@
 ---
-# https://www.elastic.co/guide/en/logstash/current/package-repositories.html
 
 # Download and install the Public Signing Key
-- apt_key: url=https://packages.elasticsearch.org/GPG-KEY-elasticsearch state=present
+- apt_key: url=https://artifacts.elastic.co/GPG-KEY-elasticsearch state=present
 
 # Add the repository definition to your /etc/apt/sources.list file
 - name: Add repository
-  apt_repository: repo="deb http://packages.elasticsearch.org/logstash/2.0/debian stable main"
+  apt_repository: repo="deb https://artifacts.elastic.co/packages/5.x/apt stable main"
   args:
     state: present
     update_cache: yes

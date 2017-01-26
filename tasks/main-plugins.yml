@@ -1,0 +1,15 @@
+---
+
+# Working with plugins
+# https://www.elastic.co/guide/en/logstash/current/working-with-plugins.html
+
+# Input plugins
+# https://www.elastic.co/guide/en/logstash/current/input-plugins.html
+
+# sudo /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/laravel.conf --verbose --path.settings /etc/logstash [or --debug]
+- command: bin/logstash-plugin install logstash-input-beats
+  args:
+    chdir: "/usr/share/logstash"
+    creates: "/usr/share/logstash/plugins/logstash-input-beats"
+  when: logstash_install_input_beats == true
+  notify: restart-logstash

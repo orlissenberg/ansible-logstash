@@ -3,7 +3,11 @@
 
 logstash_user: "root"
 logstash_group: "root"
-logstash_conf_dest: /etc/logstash/conf.d
+
+logstash_config_path: /etc/logstash/conf.d
 
 logstash_mysql_slow_install: false
 logstash_mysql_slow_path: ""
+
+# plugins
+logstash_install_input_beats: false
